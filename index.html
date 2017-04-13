@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <title>Clock App</title>
+</head>
+
+<body>
+    <h1> Welcome to Angular..!</h1>
+
+    <div ng-controller="hourCtrl">
+        <p ng-if="hourOfDay < 12">Good Morning.. </p>
+        <p ng-if="hourOfDay > 17">Good Evening.. </p>
+        <p>the hour of day is : {{hourOfDay}} </p>
+    <div>
+    <div ng-controller="timeCtrl">
+        Enter time you want: <input ng-model="newTime" type="text"> </input>
+        <p>The time is {{newTime}}</p>
+        <h3>Current Time is: {{timeString}}</h3>
+        <button ng-click="updateTime()">Update Time</button>
+    </div>
+
+    </div>
+</body>
+
+</html>
